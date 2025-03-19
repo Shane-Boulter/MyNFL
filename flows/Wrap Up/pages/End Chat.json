@@ -1,0 +1,38 @@
+{
+  "name": "95c22e4d-62fa-4f52-af8d-bc40a53ee7e9",
+  "displayName": "End Chat",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Come back if you need anything else. Goodbye." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "handoff.agent",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Handoff",
+    "name": "c77ad2d9-b41f-4d91-958a-177103272424"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "9bf755c6-f6f9-4f04-a77f-c006c2839677"
+  } ]
+}

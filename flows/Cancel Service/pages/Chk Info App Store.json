@@ -1,0 +1,46 @@
+{
+  "name": "9351be54-8570-46db-99cb-2d1579d3e404",
+  "displayName": "Chk Info App Store",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.LOWER($session.params.p_app_store_type.original) = \"apple\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel URL Apple",
+    "name": "ea37193d-42fe-49d5-b408-1d28f5ec2836"
+  }, {
+    "condition": "$sys.func.LOWER($session.params.p_app_store_type.original) = \"google/android\" OR $sys.func.LOWER($session.params.p_app_store_type.original) = \"android\" OR $sys.func.LOWER($session.params.p_app_store_type.original) = \"google\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel URL Google",
+    "name": "26e70cc0-4425-4e29-ad30-3c951023d19c"
+  }, {
+    "condition": "$sys.func.LOWER($session.params.p_app_store_type.original) = \"roku\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel URL Roku",
+    "name": "08bac8e6-4332-4a4a-bef3-2a46271b10ed"
+  }, {
+    "condition": "$sys.func.LOWER($session.params.p_app_store_type.original) = \"amazon\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel URL Amazon",
+    "name": "731034ec-fc5a-4184-a63c-06f3e9667e91"
+  } ]
+}

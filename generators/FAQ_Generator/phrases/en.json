@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "Generate a response that is exactly 250 characters long, including spaces and special characters. The content should be concise, informative, and fit within the 250-character limit.",
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "a8553494-e79c-4cd2-895c-c081258e1bb4",
+  "displayName": "Follow Up - Yes",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great to hear, I am happy to help." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "Wrap Up",
+    "name": "e5dec8ef-ce3d-49b5-8ea5-784e543b86aa"
+  } ]
+}

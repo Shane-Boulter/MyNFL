@@ -1,0 +1,47 @@
+{
+  "name": "0bd731d1-e7fb-41f7-8a53-1cdcf40f3da9",
+  "displayName": "R_Services",
+  "transitionRoutes": [ {
+    "intent": "service.start",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Start Service",
+    "name": "08498ec2-b600-48f7-87a0-57dc2a9d6de7"
+  }, {
+    "intent": "service.cancel",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cancel Service",
+    "name": "25a44a8c-6b60-432e-b601-c2620846285a"
+  }, {
+    "intent": "user.gameComplaint",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Game Complaint",
+    "name": "d5d257a4-1dbf-4323-9ffb-a9dd8c571346"
+  }, {
+    "intent": "handoff.agent",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Handoff",
+    "name": "65858b8e-c35d-4963-99ae-e26053025bcb"
+  }, {
+    "intent": "user.feedback",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "User Feedback",
+    "name": "46d895a1-08ad-48e5-bfe9-312d6846c546"
+  }, {
+    "intent": "user.inappropriateInput",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Inappropriate User Input",
+    "name": "4c561f8d-d61b-41c6-b4e9-6c0982c6acd0"
+  } ]
+}

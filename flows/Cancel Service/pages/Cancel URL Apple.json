@@ -1,0 +1,43 @@
+{
+  "name": "990f363e-b3b0-4a9a-8bf0-ad47d26f85ac",
+  "displayName": "Cancel URL Apple",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here are instructions on how to cancel a subscription from Apple. " ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "anchor": {
+            "href": "https://support.apple.com/en-us/118428"
+          },
+          "subtitle": "click here",
+          "title": "Cancel a Subscription",
+          "type": "info"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Service Response Follow Up",
+    "name": "62a4ec41-4411-4e30-9fd2-5a0758903f6f"
+  } ]
+}

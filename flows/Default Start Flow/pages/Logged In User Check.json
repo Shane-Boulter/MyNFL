@@ -1,0 +1,54 @@
+{
+  "name": "12e78567-c851-4852-aa58-c7d78134039e",
+  "displayName": "Logged In User Check",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sp_user_loggedIn = \"true\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sp_subscription_origin",
+        "value": "NFL Website"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Welcome Intro Message",
+    "name": "2deb3c42-08cf-4248-bb2b-042c1fe0cf37"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "sp_subscription_origin",
+        "value": "App"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Welcome Intro Message",
+    "name": "d3833f60-c979-4d28-86c3-04fdd7bb6fd2"
+  } ]
+}

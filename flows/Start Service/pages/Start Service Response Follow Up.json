@@ -1,0 +1,122 @@
+{
+  "name": "e804d966-4277-4102-bd4f-7ec3a86e459e",
+  "displayName": "Start Service Response Follow Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Did this help answer your question?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Follow Up Yes",
+    "name": "1cd9d195-f99b-4690-be8a-7d2c33c6370e"
+  }, {
+    "intent": "confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Follow Up No",
+    "name": "f9694199-d221-46ad-a7bd-37c507967d73"
+  }, {
+    "intent": "handoff.agent",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Handoff",
+    "name": "8ea62088-2c32-4bef-ada8-f15a52f7387e"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "2528a2f2-f83f-438d-a60b-724d872a7d8b"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ba85e2f8-e226-49c0-b5e3-74e1127f6973"
+  }, {
+    "targetFlow": "Wrap Up",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "96aab91d-8ea7-4f9e-a38b-5beeb24cbba0"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "69c293fa-2d75-4801-92ba-b1bf8e712c63"
+  } ]
+}

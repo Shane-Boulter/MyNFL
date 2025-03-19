@@ -1,0 +1,100 @@
+{
+  "name": "1394c3ff-37de-4cc4-81a5-e81f50cc916c",
+  "displayName": "Collect Info App Store",
+  "form": {
+    "parameters": [ {
+      "displayName": "p_app_store_type",
+      "required": true,
+      "entityType": "@e_app_store_type",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which app store did you use?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Apple"
+                }, {
+                  "text": "Google/Android"
+                }, {
+                  "text": "Roku"
+                }, {
+                  "text": "Amazon"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "cacfa3fa-41fb-4ddd-963f-db4d30746e67"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "244b0aac-e157-48ec-8806-6ff2fe73f8d3"
+        }, {
+          "targetFlow": "Wrap Up",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "0c0d529c-eeb3-44d1-addb-2a703db391de"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Chk Info App Store",
+    "name": "0d781fe8-14b3-4586-b6d0-f85d2134a6a4"
+  } ],
+  "agentTransitionRouteGroups": [ "R_others" ]
+}

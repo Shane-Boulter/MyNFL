@@ -1,0 +1,101 @@
+{
+  "name": "50f36461-7cad-4390-aebd-625b227c02be",
+  "displayName": "Cancel URL Roku",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here are instructions on how to cancel a subscription from Roku." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "anchor": {
+            "href": "https://support.roku.com/article/208756478"
+          },
+          "subtitle": "click here",
+          "title": "Cancel a Subscription",
+          "type": "info"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Service Response Follow Up",
+    "name": "84b7ddf9-6ce6-4322-9b2a-eaf19c371db2"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "a6f05add-45c6-4535-baa9-e16501de159f"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "5f78e535-6a12-4876-93e7-8b40f2c34258"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "e5c847af-3c5d-4828-84a2-6d3615e40a2e"
+  } ]
+}

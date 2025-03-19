@@ -1,0 +1,142 @@
+{
+  "name": "96292b3c-279f-43ed-b35f-679d3e496deb",
+  "displayName": "Cancel Service Response Follow Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Did this help answer your question?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great to hear, I am happy to help." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "Wrap Up",
+    "name": "02973f0a-7ac7-4699-9b7f-b3c747da128f"
+  }, {
+    "intent": "confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm always learning how to improve, so I appreciate your feedback." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "Wrap Up",
+    "name": "3e387f55-b960-49e5-98cd-e71c9796386d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ca189851-0824-4a08-b0e0-926b9f3189eb"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "54b4f381-93db-4946-8e2f-4e6e367a4d8f"
+  }, {
+    "targetFlow": "Wrap Up",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "4f8d6d5d-e96c-425c-866e-ad9e423a1cfd"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "be8c75e2-82c4-47c3-887b-37b241114528"
+  } ],
+  "agentTransitionRouteGroups": [ "R_others" ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "fee845c8-5aba-49d4-8fe8-8ca4b6a0811b",
+  "displayName": "Follow Up - No",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm always learning how to improve, so I appreciate your feedback." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "Wrap Up",
+    "name": "d6edb81e-47c4-4f0e-8184-ac011e6d08da"
+  } ]
+}

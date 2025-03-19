@@ -1,0 +1,50 @@
+{
+  "name": "3775b34d-2f3a-4d01-9b4a-aff7465dc4f9",
+  "displayName": "FAQ Content",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$sys.func.COUNT($request.knowledge.answers) \u003e 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$request.knowledge.answers[0]" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "$session.params.sp_default_faqres_datastore" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "FAQ Response Follow Up",
+    "name": "d041c223-ba3d-47b8-9cd2-494bda864b01"
+  } ],
+  "knowledgeConnectorSettings": {
+  
+  }
+}

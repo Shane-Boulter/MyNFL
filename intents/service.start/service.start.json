@@ -1,0 +1,10 @@
+{
+  "name": "cf61a57a-103f-4bde-8cbc-ab6cc161699a",
+  "displayName": "service.start",
+  "priority": 500000,
+  "labels": [ {
+    "key": "driver",
+    "value": "account"
+  } ],
+  "numTrainingPhrases": 17
+}

@@ -1,0 +1,101 @@
+{
+  "name": "88bfb186-d8a5-47a7-a15a-b1468bcbb8ff",
+  "displayName": "Cancel URL Amazon",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here are instructions on how to cancel a subscription from Amazon." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "anchor": {
+            "href": "https://www.amazon.com/gp/help/customer/display.html?nodeId=G57V745LBUAWDQ78"
+          },
+          "subtitle": "click here",
+          "title": "Cancel a Subscription",
+          "type": "info"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Service Response Follow Up",
+    "name": "48d7b5dc-3b20-49dd-81ef-ee84388cf405"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "4d2a7a77-4448-449b-a4da-1b363abbb9d8"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "c27d11d0-b433-4829-82b5-ef2d3e437301"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ce2d48f7-ab20-4f97-93ee-61ace954ff86"
+  } ]
+}

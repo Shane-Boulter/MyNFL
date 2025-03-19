@@ -1,0 +1,89 @@
+{
+  "name": "65009e92-69fb-4222-8f4c-6e8248632991",
+  "displayName": "Pause Service Response Follow Up",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Did this help answer your question?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Follow Up - Yes",
+    "name": "be1dc31d-9813-4e89-8f8b-87ed0bf56a14"
+  }, {
+    "intent": "confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Follow Up - No",
+    "name": "f2d29c32-f82a-462e-bd7e-e38df2002c48"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "90063032-1153-4e2e-b3a0-952a9a863ee8"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "65e79d5b-dab4-4d02-b837-99c22b853bee"
+  } ]
+}

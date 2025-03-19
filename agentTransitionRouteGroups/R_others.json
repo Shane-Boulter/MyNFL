@@ -1,0 +1,33 @@
+{
+  "name": "72f02e08-e535-457f-9fdf-98593188adc2",
+  "displayName": "R_others",
+  "transitionRoutes": [ {
+    "intent": "user.gameComplaint",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Game Complaint",
+    "name": "7b0e4d2a-fc41-4551-a33b-9f40a992bb6c"
+  }, {
+    "intent": "user.inappropriateInput",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Inappropriate User Input",
+    "name": "9c18bce9-4ad0-4700-a209-399608146628"
+  }, {
+    "intent": "user.feedback",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "User Feedback",
+    "name": "c58c8248-22d3-4827-bad9-05f91f49fc86"
+  }, {
+    "intent": "handoff.agent",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Handoff",
+    "name": "64f164d7-f6e0-4e28-bba3-1e0b71f1e509"
+  } ]
+}

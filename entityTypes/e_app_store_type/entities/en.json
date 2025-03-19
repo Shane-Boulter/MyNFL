@@ -1,0 +1,27 @@
+{
+  "entities": [ {
+    "value": "Apple",
+    "synonyms": [ "Apple" ],
+    "languageCode": "en"
+  }, {
+    "value": "Google/Android",
+    "synonyms": [ "Google/Android" ],
+    "languageCode": "en"
+  }, {
+    "value": "Roku",
+    "synonyms": [ "Roku" ],
+    "languageCode": "en"
+  }, {
+    "value": "Amazon",
+    "synonyms": [ "Amazon" ],
+    "languageCode": "en"
+  }, {
+    "value": "Google",
+    "synonyms": [ "Google" ],
+    "languageCode": "en"
+  }, {
+    "value": "Android",
+    "synonyms": [ "Android" ],
+    "languageCode": "en"
+  } ]
+}

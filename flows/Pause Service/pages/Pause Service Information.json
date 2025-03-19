@@ -1,0 +1,15 @@
+{
+  "name": "f6b107ce-3e89-46d9-935f-9cea5cb81614",
+  "displayName": "Pause Service Information",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pause Service Response Follow Up",
+    "name": "a8472077-8455-4af9-9f9b-87f8b761f25a"
+  } ]
+}

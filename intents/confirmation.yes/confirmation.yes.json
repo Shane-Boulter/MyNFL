@@ -1,0 +1,10 @@
+{
+  "name": "82377c9c-eb3c-4845-b873-d846d5dc563d",
+  "displayName": "confirmation.yes",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

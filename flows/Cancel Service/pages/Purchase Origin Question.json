@@ -1,0 +1,143 @@
+{
+  "name": "dac0aa46-7e52-418c-a1ec-3477a2750a8a",
+  "displayName": "Purchase Origin Question",
+  "form": {
+    "parameters": [ {
+      "displayName": "p_purchase_origin",
+      "required": true,
+      "entityType": "@e_purchase_origin",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Where did you purchase your subscription from?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "NFL Website"
+                }, {
+                  "text": "In-App Purchase (Apple, Roku, Google, etc.)"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "85c82290-4a48-4297-b644-2d362a9dbeee"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "87863826-bfc1-41fa-aa8f-625ebac0354b"
+        }, {
+          "targetFlow": "Wrap Up",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "d72b903e-02c7-49bc-bc7f-1360b756b078"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "e3880a64-2ee3-41cd-9682-3ff361b29c66"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "sp_lastVisitedPage",
+      "value": "Purchase Origin Question"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\" AND $sys.func.LOWER($session.params.p_purchase_origin.original) != \"nfl website\"",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Subscription via App Store",
+    "name": "c7c21da5-b2df-4084-a3d0-82385b53ddfd"
+  }, {
+    "condition": "$page.params.status = \"FINAL\" AND $sys.func.LOWER($session.params.p_purchase_origin.original) = \"nfl website\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NFL.com Information",
+    "name": "0199d3b8-8481-4223-bab1-3223d3aba30a"
+  } ],
+  "agentTransitionRouteGroups": [ "R_others" ]
+}

@@ -1,0 +1,138 @@
+{
+  "name": "739a8cb2-0901-435e-862a-3eb84d556980",
+  "displayName": "Welcome Intro Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hi there. I'm your friendly NFL virtual assistant, here to help with your NFL+ questions.\nHow can I help you today? Type your question or select from the following topics." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Paid subscription, asking me to subscribe"
+          }, {
+            "text": "NFL Game Watch Guide"
+          }, {
+            "text": "I have technical issues"
+          }, {
+            "text": "I have issues signing in"
+          }, {
+            "text": "Refund Request"
+          }, {
+            "text": "Fantasy"
+          }, {
+            "text": "Listen Only"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "241ebcfe-e23c-48ef-93d2-793857f3ba50"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ac0aff34-a58f-4218-99e5-00222b1b7890"
+  }, {
+    "targetFlow": "Wrap Up",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+    
+    },
+    "name": "31a6a515-5065-41f7-9f09-6a2fc7688ba6"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I haven't heard from you in a bit. Is there anything I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "cfe532bf-e7ac-4ffe-bdc6-1bbc5bbbeba7"
+  } ],
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "FAQ Content",
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/953804758043/locations/global/collections/default_collection/dataStores/nfl-faq_1740006202763",
+      "languageCode": "en",
+      "documentProcessingMode": "CHUNKS",
+      "aclConfig": {
+      
+      },
+      "dialogflowAddTime": {
+        "seconds": 1740488570,
+        "nanos": 638000000
+      }
+    } ]
+  },
+  "agentTransitionRouteGroups": [ "R_manage_service", "R_others" ]
+}

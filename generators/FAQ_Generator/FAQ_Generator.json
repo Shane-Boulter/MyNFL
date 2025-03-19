@@ -1,0 +1,13 @@
+{
+  "name": "38b0d693-93c2-43aa-9b71-3ebb0669067d",
+  "displayName": "FAQ_Generator",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-1.5-flash-002"
+  }
+}

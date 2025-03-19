@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "NFL Website",
+    "synonyms": [ "NFL Website" ],
+    "languageCode": "en"
+  }, {
+    "value": "In-App Purchase (Apple, Roku, Google, etc.)",
+    "synonyms": [ "In-App Purchase (Apple, Roku, Google, etc.)" ],
+    "languageCode": "en"
+  } ]
+}

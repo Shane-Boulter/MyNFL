@@ -1,0 +1,99 @@
+{
+  "name": "8a86e3b3-a0de-4fee-885b-5f18f2f82517",
+  "displayName": "NFL.com Information",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You will need to be logged in to your account to manage your subscription. \n" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "anchor": {
+            "href": "https://id.nfl.com/account/sign-in"
+          },
+          "subtitle": "click here",
+          "title": "My Account",
+          "type": "info"
+        } ] ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Additional information on canceling your subscription can be found here." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "anchor": {
+            "href": "https://support.nfl.com/hc/en-us/articles/5401710406556-How-do-I-cancel-my-NFL-subscription"
+          },
+          "subtitle": "click here",
+          "title": "Cancel a Subscription",
+          "type": "info"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Service Response Follow Up",
+    "name": "ee98311d-5458-470d-8c00-bf85fd1efc32"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "d87c8ed4-6284-48e3-bdf1-853c2da1e888"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "19800a71-384e-449d-b634-14fffcc7b7a3"
+  } ]
+}

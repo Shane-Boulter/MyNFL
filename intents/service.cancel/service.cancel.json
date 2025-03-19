@@ -1,0 +1,10 @@
+{
+  "name": "9db4fa37-551e-4848-a9a0-16923e9d6580",
+  "displayName": "service.cancel",
+  "priority": 500000,
+  "labels": [ {
+    "key": "driver",
+    "value": "account"
+  } ],
+  "numTrainingPhrases": 16
+}

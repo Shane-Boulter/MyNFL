@@ -1,0 +1,131 @@
+{
+  "displayName": "NFL-Chatbot-dev",
+  "defaultLanguageCode": "en",
+  "timeZone": "America/Los_Angeles",
+  "enableLogging": true,
+  "projectNumber": 953804758043,
+  "speechToTextSettings": {
+  
+  },
+  "startFlow": "Default Start Flow",
+  "enableStackdriverLogging": true,
+  "advancedSettings": {
+    "audioExportGcsDestination": {
+    
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+    
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  },
+  "customPayloadTemplates": [ {
+    "displayName": "1002_Intro",
+    "payload": {
+      "richContent": [ [ {
+        "options": [ {
+          "text": "Paid subscription, asking me to subscribe"
+        }, {
+          "text": "NFL Game Watch Guide"
+        }, {
+          "text": "I have technical issues"
+        }, {
+          "text": "I have issues signing in"
+        }, {
+          "text": "Refund Request"
+        }, {
+          "text": "Fantasy"
+        }, {
+          "text": "Listen Only"
+        } ],
+        "type": "chips"
+      } ] ]
+    }
+  }, {
+    "displayName": "cancel_Inquery",
+    "payload": {
+      "richContent": [ [ {
+        "options": [ {
+          "text": "Unable to cancel"
+        }, {
+          "text": "Unauthorized renewal"
+        }, {
+          "text": "price was expensive"
+        }, {
+          "text": "Content was not enough"
+        }, {
+          "text": "I had technical issues"
+        }, {
+          "text": "It does not have enough features"
+        } ],
+        "type": "chips"
+      } ] ]
+    }
+  }, {
+    "displayName": "collec_info_app_store",
+    "payload": {
+      "richContent": [ [ {
+        "options": [ {
+          "text": "Apple"
+        }, {
+          "text": "Google/Android"
+        }, {
+          "text": "Roku"
+        }, {
+          "text": "Amazon"
+        } ],
+        "type": "chips"
+      } ] ]
+    }
+  }, {
+    "displayName": "cancel_subscription_info_response",
+    "payload": {
+      "richContent": [ [ {
+        "anchor": {
+          "href": "https://support.nfl.com/hc/en-us/articles/5401710406556-How-do-I-cancel-my-NFL-subscription"
+        },
+        "subtitle": "click here",
+        "title": "Cancel a Subscription",
+        "type": "info"
+      } ] ]
+    }
+  }, {
+    "displayName": "confirmation_Yes/No",
+    "payload": {
+      "richContent": [ [ {
+        "options": [ {
+          "text": "Yes"
+        }, {
+          "text": "No"
+        } ],
+        "type": "chips"
+      } ] ]
+    }
+  } ],
+  "genAppBuilderSettings": {
+    "engine": "projects/953804758043/locations/global/collections/default_collection/engines/a658e083-f408-42ee-863d-a0b0755f1f9b"
+  },
+  "duplexSettings": {
+  
+  },
+  "answerFeedbackSettings": {
+  
+  },
+  "webClientSettings": {
+    "boxBorderRadius": "0"
+  }
+}

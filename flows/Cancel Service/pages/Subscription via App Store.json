@@ -1,0 +1,52 @@
+{
+  "name": "2c500aad-94b9-4852-afec-c7d1dcc6b777",
+  "displayName": "Subscription via App Store",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sp_lastVisitedPage = \"Purchase Origin Question\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "For In-App purchases, you will need to follow the app's cancellation process." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "sp_lastVisitedPage",
+        "value": null
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Collect Info App Store",
+    "name": "a3621008-30b8-46ba-bd49-c62cd4991118"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "It looks like your subscription is through an app store. You will need to follow their cancellation process." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Chk Info App Store",
+    "name": "cf82d986-7d7f-4f69-9a13-80f2a08c32e6"
+  } ]
+}

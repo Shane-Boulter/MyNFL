@@ -1,0 +1,31 @@
+{
+  "name": "56c19147-9e36-4a84-ab79-fac6d9414e91",
+  "displayName": "User Feedback Response",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thank you for your feedback! We appreciate your thoughts and are always striving to improve your experience with NFL+. If you have further suggestions, feel free to share!" ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Wrap Up",
+    "name": "716e56a2-e50d-4685-85c5-0e422fd0537a"
+  } ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "d54efdf2-b74e-4c04-987b-e491c3ee583f",
+  "displayName": "Confirmation - Pause Service",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I understand you want to pause your service. I can help you with that." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Pause Service Information",
+    "name": "aba6fffd-d12b-4742-b620-e49c9bac3c9e"
+  } ]
+}

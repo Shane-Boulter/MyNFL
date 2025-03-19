@@ -1,0 +1,36 @@
+{
+  "name": "9a5cc342-e5f3-4b01-91d0-0040fad1ba33",
+  "displayName": "Subscription Service Check",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sp_subscription_origin = \"App Purchase\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Subscription via App Store",
+    "name": "3998d4c2-02e4-4dd9-b0e5-d420fa023abb"
+  }, {
+    "condition": "$session.params.sp_subscription_origin = \"NFL Website\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NFL.com Information",
+    "name": "b84d0621-ef33-4340-8707-40b7bcafa1cf"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "Purchase Origin Question",
+    "name": "126b7593-118c-4c90-9e43-a3651c3b9a94"
+  } ]
+}

@@ -1,0 +1,85 @@
+{
+  "fallbackSettings": {
+    "selectedPrompt": "Example"
+  },
+  "generativeSafetySettings": {
+    "raiSettings": {
+      "categoryFilters": [ {
+        "category": "DANGEROUS_CONTENT",
+        "filterLevel": "BLOCK_MOST"
+      }, {
+        "category": "SEXUALLY_EXPLICIT_CONTENT",
+        "filterLevel": "BLOCK_MOST"
+      }, {
+        "category": "HARASSMENT",
+        "filterLevel": "BLOCK_MOST"
+      }, {
+        "category": "HATE_SPEECH",
+        "filterLevel": "BLOCK_MOST"
+      } ]
+    },
+    "defaultRaiSettings": {
+      "categoryFilters": [ {
+        "category": "DANGEROUS_CONTENT",
+        "filterLevel": "BLOCK_FEW"
+      }, {
+        "category": "SEXUALLY_EXPLICIT_CONTENT",
+        "filterLevel": "BLOCK_SOME"
+      }, {
+        "category": "HARASSMENT",
+        "filterLevel": "BLOCK_SOME"
+      }, {
+        "category": "HATE_SPEECH",
+        "filterLevel": "BLOCK_SOME"
+      } ]
+    },
+    "defaultBannedPhraseMatchStrategy": "PARTIAL_MATCH",
+    "responsibleAiFilters": [ {
+      "category": "DANGEROUS_CONTENT",
+      "filterLevel": "MAXIMUM_BLOCKING"
+    }, {
+      "category": "SEXUALLY_EXPLICIT_CONTENT",
+      "filterLevel": "MAXIMUM_BLOCKING"
+    }, {
+      "category": "HARASSMENT",
+      "filterLevel": "MAXIMUM_BLOCKING"
+    }, {
+      "category": "HATE_SPEECH",
+      "filterLevel": "MAXIMUM_BLOCKING"
+    } ],
+    "defaultResponsibleAiFilters": [ {
+      "category": "DANGEROUS_CONTENT",
+      "filterLevel": "MINIMAL_BLOCKING"
+    }, {
+      "category": "SEXUALLY_EXPLICIT_CONTENT",
+      "filterLevel": "MODERATE_BLOCKING"
+    }, {
+      "category": "HARASSMENT",
+      "filterLevel": "MODERATE_BLOCKING"
+    }, {
+      "category": "HATE_SPEECH",
+      "filterLevel": "MODERATE_BLOCKING"
+    } ],
+    "promptSecuritySettings": {
+      "enablePromptSecurity": true,
+      "sensitivityLevel": 3,
+      "minQueryLength": 15
+    }
+  },
+  "languageCode": "en",
+  "knowledgeConnectorSettings": {
+    "business": "NFL",
+    "groundingSettings": {
+      "groundingConfidence": "LOW"
+    },
+    "disableDataStoreFallback": true,
+    "mainLlmConfig": {
+      "model": "gemini_15_flash_001",
+      "promptText": "Given the conversation between a Human and a AI assistant and a list of sources, write a final answer for the AI assistant. You are a warm and helpful virtual assistant that helps customers retrieve relevant information from the NFL Website. You have an warm, friendly and empathetic personality and you speak as if you are talking to a valuable customer. \nwrite a final answer for the AI assistant.\nFollow these guidelines:\n+ Answer the Human's query and make sure you mention all relevant details from the sources, using exactly the same words as the sources if possible.\n+ Responses must be less then 250 characters in length.  \n+ The answer must be based only on the sources and not introduce any additional information.\n\n\nBegin! Let's work this out step by step to be sure we have the right answer.\n\nSources:\n$sources\n\n$conversation\nHuman: $original-query\nAI:\n"
+    },
+    "enablePromptSecurity": true
+  },
+  "llmModelSettings": {
+  
+  }
+}

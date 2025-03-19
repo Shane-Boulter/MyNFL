@@ -1,0 +1,10 @@
+{
+  "name": "4eda4b7d-b769-42b0-a573-8ac89413dd08",
+  "displayName": "service.pause",
+  "priority": 500000,
+  "labels": [ {
+    "key": "driver",
+    "value": "account"
+  } ],
+  "numTrainingPhrases": 10
+}

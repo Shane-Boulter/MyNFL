@@ -1,0 +1,22 @@
+{
+  "name": "5044a5bb-3ba0-4c5e-b985-d6ce3cd8c814",
+  "displayName": "Agent Availability Check",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sp_agent_hours = \"Open\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Agent Available",
+    "name": "65aecc3f-6e1c-4adf-9b6c-ffee20450f78"
+  }, {
+    "condition": "$session.params.sp_agent_hours = \"Closed\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Agent Unavailable",
+    "name": "b1d4d328-f4a0-48fb-837f-d6f6b3b6168a"
+  } ]
+}

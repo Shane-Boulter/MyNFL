@@ -1,0 +1,13 @@
+{
+  "name": "665c9c58-89ad-4c99-adcd-64ba0a4a6e72",
+  "displayName": "Agent HandOff",
+  "genericWebService": {
+    "uri": "https://zd-integration-953804758043.us-central1.run.app/passControl ",
+    "webhookType": "FLEXIBLE",
+    "httpMethod": "POST",
+    "requestBody": "{\n  \"userName\": \"$session.params.p_user_name.original\",\n  \"userEmail\": \"$session.params.p_user_emailaddress\",\n  \"sessionId\": \"$request.session-id\",\n  \"x-api-key\": \"$session.params.x-api-key\"\n}"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "name": "ce75dd62-bcca-488e-a60d-590dcaf3c324",
+  "displayName": "Agent Available",
+  "form": {
+    "parameters": [ {
+      "displayName": "p_user_name",
+      "required": true,
+      "entityType": "@sys.person",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is your first and last name?" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "1893ea8d-2716-4942-b968-e418c37af9cc"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "5398968d-4fbc-4753-b899-84d5dbfe2e10"
+        }, {
+          "targetFlow": "Wrap Up",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+          
+          },
+          "name": "3fe1ca39-627d-4c97-a9cc-7ae31425db86"
+        } ]
+      }
+    }, {
+      "displayName": "p_user_emailaddress",
+      "required": true,
+      "entityType": "@sys.email",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "And can you share your email address with me, please?" ]
+            },
+            "languageCode": "en"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            },
+            "dtmfSettings": {
+              "useSystemEntityRule": false
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I didn't quite catch that. Could you try again with some different terms?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "ec48ed72-827b-4b53-8795-044e5d732759"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I'm not able to find what you are looking for. Want to give it another go with a bit more detail?" ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "2976c32d-0ead-4c9f-804f-2c8c4f78914e"
+        }, {
+          "targetFlow": "Wrap Up",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+              
+              },
+              "dtmfSettings": {
+                "useSystemEntityRule": false
+              }
+            }
+          },
+          "name": "ef500d3c-e191-48c6-ab2a-b56ebf496a14"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Let me connect you with someone who can assist you better." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "handoff zendesk",
+    "name": "99ba48dd-1aec-4a25-9cd9-1e158a3eb4a7"
+  } ]
+}

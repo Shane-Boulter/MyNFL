@@ -1,0 +1,61 @@
+{
+  "name": "47d4d8bc-df34-4373-a53e-6b0a6963edc0",
+  "displayName": "Current Messaging Cancel Service Inquiry",
+  "form": {
+    "parameters": [ {
+      "displayName": "p_cancel_service_inquery",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We are sad to see you go. Let me help with canceling your service. \r\n\r\nTo assist you further, please select your reason for leaving." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Unable to cancel"
+          }, {
+            "text": "Unauthorized renewal"
+          }, {
+            "text": "Price was expensive"
+          }, {
+            "text": "Content was not enough"
+          }, {
+            "text": "I had technical issues"
+          }, {
+            "text": "It does not have enough features"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Subscription Service Check",
+    "name": "f58cd585-214f-4be5-b09c-3800f3c56794"
+  } ],
+  "agentTransitionRouteGroups": [ "R_others" ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "860049c6-65d0-45da-b82b-3bb424f11560",
+  "displayName": "R_manage_service",
+  "transitionRoutes": [ {
+    "intent": "service.cancel",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cancel Service",
+    "name": "146a48a7-2c31-4c91-997c-e0bc1128e669"
+  }, {
+    "intent": "service.start",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Start Service",
+    "name": "ff503e6f-6408-4d16-8df3-baeb75d40fa1"
+  } ]
+}

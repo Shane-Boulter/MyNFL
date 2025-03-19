@@ -1,0 +1,68 @@
+{
+  "name": "51d70dec-2f5c-4f97-81e9-90f501d8dfb0",
+  "displayName": "issue 12",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Welcome Intro Message",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi there. I'm your friendly NFL virtual assistant, here to help with your NFL+ questions.\nHow can I help you today? Type your question or select from the following topics." ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I have NFL+, but I can’t access live games on my connected television. How do I access live games?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "service.start"
+      },
+      "currentPage": {
+        "name": "Start Service Response Follow Up",
+        "flow": "Start Service"
+      },
+      "textResponses": [ {
+        "text": [ "I can point you in the right direction to get you a subscription." ]
+      }, {
+        "text": [ "For NFL+ and NFL + Premium subscriptions, you can get started by selecting the link below.\n" ]
+      }, {
+        "text": [ "Did this help answer your question?" ]
+      } ],
+      "currentFlow": {
+        "name": "Start Service"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1741599871,
+    "nanos": 876600000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  },
+  "languageCode": "en"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "a8c8b4d0-3b89-4690-a28a-91f188b799bf",
+  "displayName": "Complaint Threat User Input Response",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I understand you're frustrated, and I'm here to help resolve your issue. However, using inappropriate language hinders our ability to assist you effectively. " ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "2e3ca034-a732-45ec-9bef-de307ffc03e1"
+  } ]
+}

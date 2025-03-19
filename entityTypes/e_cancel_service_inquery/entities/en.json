@@ -1,0 +1,27 @@
+{
+  "entities": [ {
+    "value": "Unable to cancel",
+    "synonyms": [ "Unable to cancel", "unable to cancel" ],
+    "languageCode": "en"
+  }, {
+    "value": "Unauthorized renewal",
+    "synonyms": [ "Unauthorized renewal", "unauthorized renewal" ],
+    "languageCode": "en"
+  }, {
+    "value": "Price was expensive",
+    "synonyms": [ "Price was expensive", "price was expensive" ],
+    "languageCode": "en"
+  }, {
+    "value": "Content was not enough",
+    "synonyms": [ "Content was not enough", "content was not enough" ],
+    "languageCode": "en"
+  }, {
+    "value": "I had technical issues",
+    "synonyms": [ "I had technical issues", "i had technical issues" ],
+    "languageCode": "en"
+  }, {
+    "value": "It does not have enough features",
+    "synonyms": [ "It does not have enough features", "it does not have enough features" ],
+    "languageCode": "en"
+  } ]
+}

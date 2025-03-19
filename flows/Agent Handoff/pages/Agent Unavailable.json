@@ -1,0 +1,46 @@
+{
+  "name": "add2ff32-d426-48be-89c1-47e1765f6ae4",
+  "displayName": "Agent Unavailable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "There are currently no agents available at this time." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "You can email your query to support@nfl.com, or submit a ticket and one of our team members will assist you as soon as possible." ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Submit Ticket"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "16de597a-7e00-4068-b9e7-e7bc467efd55"
+  } ]
+}

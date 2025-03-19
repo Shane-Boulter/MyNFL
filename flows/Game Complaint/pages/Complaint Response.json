@@ -1,0 +1,31 @@
+{
+  "name": "0b2289ef-9586-45b9-9087-ad572e0e013a",
+  "displayName": "Complaint Response",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thank you for your feedback. I understand you're frustrated, We appreciate your thoughts and are always striving to improve your experience." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Wrap Up",
+    "name": "e8db1689-f2fa-4b40-9f83-468dd061c25f"
+  } ]
+}
